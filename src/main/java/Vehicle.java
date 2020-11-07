@@ -6,5 +6,7 @@ public interface Vehicle {
     Point getCurrentLocation();
 
     double totalDistanceCovered();
-//    add file
+/*
+* comments added
+* */
 }
