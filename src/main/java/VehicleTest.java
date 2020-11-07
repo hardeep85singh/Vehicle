@@ -1,10 +1,13 @@
-public class VehicleTest {
-    public static void main(String[]args){
-        Vehicle vehicle = new Point(0,0);
+import javax.swing.*;
 
-        vehicle.moveTo(4,3);
-        vehicle.moveTo(0,3);
-        vehicle.getCurrentLocation();
-        //System.out.print(vehicle.totalDistanceCovered(vehicle.getCurrentLocation()));
+public class VehicleTest {
+    public static void main(String[] args) {
+
+        Vehicle vehicle = new VehicleImpl();
+
+        vehicle.moveTo(4, 3);
+        System.out.println(vehicle.totalDistanceCovered());
+        vehicle.moveTo(0, 3);
+        System.out.println(vehicle.getCurrentLocation());
     }
 }

@@ -1,7 +1,9 @@
 
 
 public interface Vehicle {
-    void moveTo(int X, int Y);
+    void moveTo(int x, int y);
+
     Point getCurrentLocation();
-    double totalDistanceCovered(Point point);
+
+    double totalDistanceCovered();
 }

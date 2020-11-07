@@ -1,64 +1,35 @@
-public class Point implements Vehicle {//change name
-    private int X; //should be small
-    private int Y;
-//    private Point point;
-    private double distanceCovered = 0;
+public class Point{
 
-    public Point() {
-        X = 0;
-        Y = 0;
+    private final int x;
+    private final int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public Point(int X, int Y) {
-        this.X = X;
-        this.Y = Y;
+    public int getX(){
+        return x;
     }
 
-    public Point(Point point) {
-        this.X = point.X;
-        this.Y = point.Y;
+    public int getY(){
+        return y;
     }
 
-    public int getX() {
-        return X;
+
+    public Point translate(int dx, int dy){
+        return null;
+       // this.x = x + dx;
+       // this.y = y + dy;
     }
 
-    public int getY() {
-        return Y;
+    public double distanceTo(Point p){
+        double dx = this.x - p.x;
+        double dy = this.y - p.y;
+        return Math.sqrt(dx*dx + dy*dy);
     }
 
-    public void setX(int X) {
-        this.X = X;
-    }
-
-    public void setY(int Y) {
-        this.Y = Y;
-    }
-
-//    public double distance(int X, int Y) {
-//        double dist = Math.sqrt(Math.pow((this.X - X), 2) + Math.pow((this.Y - Y), 2));
-//        distanceCovered = distanceCovered + dist;
-//        return dist;
-//    }
-//
-//    public double distance(Point p) {
-//        double dist = Math.sqrt(Math.pow((X - p.X), 2) + Math.pow((Y - p.Y), 2));
-//        distanceCovered = distanceCovered + dist;
-//        return dist;
-//    }
-
-    public void moveTo(int X, int Y) {
-        this.X = X;
-        this.Y = Y;
-    }
-
-    public Point getCurrentLocation() {
-        Point p = new Point(this.X, this.Y);
-        return p;
-    }
-
-    public double totalDistanceCovered(Point p) {
-
-        return 0;
+    public String toString(){
+        return "(" + x + "," + y +")";
     }
 }
